@@ -10,9 +10,9 @@
 
 load_ref <- function(samples){
 if(missing(samples)){
-load(paste0(find.package("IPCO"),"/data/IPCO_Healthy.RData"))
+load(paste0(find.package("IPCO"),"/ref_data/IPCO_Healthy.RData"))
 } else if (samples=="HMP"){
-load(paste0(find.package("IPCO"),"/data/IPCO_HMP.RData"))
+load(paste0(find.package("IPCO"),"/ref_data/IPCO_HMP.RData"))
 } else {
 print("type load_ref(samples=\"HMP\") to load Reference HMP or load_ref() to load the cohort of healthy")
 }
