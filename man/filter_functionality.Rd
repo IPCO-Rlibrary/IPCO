@@ -9,7 +9,7 @@ filter_functionality(dataset, type, threshold_dataset, threshold)
 \arguments{
 \item{dataset}{dataset where rows are functions/pathways and columns are samples.}
 
-\item{type}{the type of dataset provided: (coverage or abundance).}
+\item{type}{the type of dataset provided: (KEGG or MetaCyc).}
 
 \item{threshold_dataset}{dataset containing the information about pathway/function coverage. Threshold dataset should contain the same functions/pathways as present in dataset.}
 

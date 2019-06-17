@@ -3,5 +3,4 @@
 export(IPCO)
 export(check_coinertia)
 export(filter_functionality)
-export(load_ref)
 export(transform_data)
