@@ -5,7 +5,7 @@
 #' You can opt to not filter the dataset at all so that all functionality is predicted.
 #' @param Requires the dataset to be transformed and whether to filter by covearge or abundance.
 #' @param dataset  dataset where rows are functions/pathways and columns are samples.
-#' @param type the type of dataset provided: (KEGG or MetaCyc).
+#' @param type the type of dataset provided: (kegg or metacyc).
 #' @param Optional threshold_dataset, levels.
 #' @param threshold_dataset dataset containing the information about pathway/function coverage. Threshold dataset should contain the same functions/pathways as present in dataset.
 #' @param levels Default is 0.01 for coverge or the first quartile of the mean function/pathway abundance.
