@@ -1,14 +1,23 @@
 Package: IPCO
-Title: What the Package Does (One Line, Title Case)
-Version: 0.0.0.9000
+Title: Inference of Pathways from Co-variance Analysis
+Version: 0.1
 Authors@R: 
-    person(given = "First",
-           family = "Last",
+    person(given = "Ian",
+           family = "B. Jeffery",
            role = c("aut", "cre"),
-           email = "first.last@example.com")
-Description: What the package does (one paragraph).
-License: What license it uses
+           email = "i.jeffery@ucc.com")
+Description: IPCO is an open-source R library that infers functionality for a 16S
+				dataset. IPCO can be implemented using internal or external reference
+				data as per convinience. The references provided in IPCO are
+				generated with UniRef90 database and the largest and manually
+				curated MetaCyc mapping file provided along with
+				HUMAnN2. It implements a double co-inertia methodology on the
+				reference taxonomy and functionality database and
+				co-varies it with the queried data.
+License: GPL (>= 2)
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.1.1
 Depends: R(>= 3.5.0), ade4 (>= 1.3.11)
+Suggests: knitr, rmarkdown
+VignetteBuilder: knitr
