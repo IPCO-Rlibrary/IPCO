@@ -20,7 +20,9 @@ If using in-house reference and 16S dataset, then point number 4 is not mandator
 2.	Load **library(devtools)**
 3.	Run **install_github("https://github.com/IPCO-Rlibrary/IPCO")**
 4.	If compatible version of ade4 library is not install then it needs to be install first.
- 
+
+A pdf of the workflow is also available on GitHub under IPCO
+
 ### IPCO commands
 The prediction is a single step process in IPCO, however, precursor and optional steps involves loading the required reference data, normalisation/transformation of datasets, filtering functionality based on coverage and checking for covariance in reference if using in-house reference data.
 
