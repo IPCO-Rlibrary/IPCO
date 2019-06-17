@@ -159,10 +159,10 @@ Ref_MetaCyc_filter <- filter_functionality(Ref_MetaCyc_norm, “metacyc”, IPCO
 
 IPCO_inferred <- IPCO(Ref_MetaCyc_filter, Ref_Species_norm, queried_dataset)
 
-In case using in-house reference datasets
-
 **Step 5:** Check coinertia 
 
 coinertia_resuls <- check_coinertia(taxonomy_table,functional_table)
 
-**Note:** Ensure that the taxonomy and functional tables contains the same samples and in the same order.
+**Note:** In case using in-house reference datasets.
+
+Ensure that the taxonomy and functional tables contains the same samples and in the same order.
