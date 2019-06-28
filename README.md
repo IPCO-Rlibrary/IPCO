@@ -1,4 +1,4 @@
-### IPCO: Inference of Pathways from Co-variance Analysis
+### IPCO: Inference of Pathways from Co-variance analysis
 
 IPCO is an open-source R library that infers functionality for a 16S dataset. IPCO can be implemented using internal or external reference data as per convenience. The references provided in IPCO are generated with UniRef90 database and the largest and manually curated MetaCyc mapping file provided along with HUMAnN2. It implements a double co-inertia methodology on the reference taxonomy and functionality database and co-varies with the queried data. The latest version can be downloaded from GitHub (https://github.com/IPCO-Rlibrary/IPCO). 
 
@@ -31,6 +31,8 @@ The prediction is a single step process in IPCO, however, precursor and optional
          a) Genus and species level, MetaCyc pathways and KEGG pathways abundance and coverage table for a large cohort of healthy samples (n=1180)
          b) HMP stool 16S (closed OTUs, genus and species level) and MetaCyc and KEGG pathways abundance and coverage datasets
 We also provide other datasets, however, they are automatically available for loading into R, but can be accessed manually from the IPCO/data folder in GitHub. (Currently these datasets are not available and would be available soon)
+
+**Note** Current references are obtained from stool samples and is intended for inferring stool samples only.
 
 Usage
 
