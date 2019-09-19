@@ -189,4 +189,4 @@ genus_table <- as(otu_table(phyloseq_genus), "matrix")
 
 **Normalise the count table extracted from Phyloseq object if not done already**
 
-**As discussed above**
+**Rest of the step are as discussed above**
