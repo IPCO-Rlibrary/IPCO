@@ -168,3 +168,25 @@ coinertia_resuls <- check_coinertia(taxonomy_table,functional_table)
 **Note:** In case using in-house reference datasets.
 
 Ensure that the taxonomy and functional tables contains the same samples and in the same order.
+
+### Bonus extracting from Phyloseq object
+
+**Step 1: Extract the required matrix from Phyloseq object**
+
+**first convert the OTU level phyloseq object to species/genus level phyloseq object**
+
+library(phyloseq)
+
+phyloseq_genus <- tax_glom(phyloseq_object, taxrank="Genus")
+
+**If the above step is already done, then you can start from here**
+
+**Convert phyloseq genus/species level object to matrix**
+
+genus_table <- as(otu_table(phyloseq_genus), "matrix")
+
+**Step 2: Using IPCO**
+
+**Normalise the count table extracted from Phyloseq object if not done already**
+
+**As discussed above**
