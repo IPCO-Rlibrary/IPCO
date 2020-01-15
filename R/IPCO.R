@@ -46,14 +46,14 @@ L_table <- t(L_table)
 print("Implementing IPCO")
 
 L.coa <- dudi.coa(L_table,scannf = FALSE,nf = 3)
-R.pca <- dudi.pca(R_table, row.w = L.coa$lw, scale = FALSE, scannf = FALSE, nf = 3)
-Q.pca <- dudi.pca(Q_table, row.w = L.coa$cw, scale = FALSE, scannf = FALSE, nf = 3)
+R.pca <- dudi.pca(R_table, row.w = L.coa$lw, scale = FALSE, scannf = FALSE, nf = 5)
+Q.pca <- dudi.pca(Q_table, row.w = L.coa$cw, scale = FALSE, scannf = FALSE, nf = 5)
 
 row.w <- L.coa$lw
 
 envAvg <- apply(R_table, 2, function(x){sum(x*row.w)/sum(row.w)})
 
-rlq_object <- rlq(R.pca, L.coa, Q.pca, scannf = FALSE, nf = 3)
+rlq_object <- rlq(R.pca, L.coa, Q.pca, scannf = FALSE, nf = 5)
 
 Inferred_function <- list()
 
