@@ -107,7 +107,7 @@ Arguments
 **Requires** 	The references functional (R) and its paired taxonomy dataset (L) and the taxonomy dataset (Q) for which functions need to be inferred
 
 
-**Note:** Use of transformed/normalised and/or filtered datasets is optional however, it is recommended. IPCO internally check if there are zero abundance features and also check for common features (OTUs/genus/species) between reference taxonomy and queried dataset.
+**Note:** Use of transformed/normalised and/or filtered datasets is optional however, it is recommended. IPCO internally check if there are zero abundance features and also check for common features (OTUs/genus/species) between reference taxonomy and queried dataset. It will output a list containing two objects. First object is the predicted functionality table and the second object is the contribution of the taxa to those functionality.
 
 ### 5.	Checking for significant covariance between reference taxonomic and functional datasets (optional)
 
@@ -160,6 +160,14 @@ Ref_MetaCyc_filter <- filter_functionality(Ref_MetaCyc_norm, “metacyc”, IPCO
 **Step 4: Inference**
 
 IPCO_inferred <- IPCO(Ref_MetaCyc_filter, Ref_Species_norm, queried_dataset)
+
+### Table containing predicted functionality
+
+IPCO_inferred$predicted
+
+### Contribution of taxa to the functionality
+
+IPCO_inferred$taxa_contribution
 
 **Step 5:** Check coinertia 
 
