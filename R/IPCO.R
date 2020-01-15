@@ -55,7 +55,11 @@ envAvg <- apply(R_table, 2, function(x){sum(x*row.w)/sum(row.w)})
 
 rlq_object <- rlq(R.pca, L.coa, Q.pca, scannf = FALSE, nf = 3)
 
-Inferred_function <- sweep(as.matrix(rlq_object$tab), 1, envAvg, "+")
+Inferred_function <- list()
+
+Inferred_function$predicted <- sweep(as.matrix(rlq_object$tab), 1, envAvg, "+")
+
+Inferred_function$taxa_contribution <- rev(sort(rowSums(prop.table(as.matrix(abs(rlq_object$lQ)),2))))*100
 
 return(Inferred_function)
 }
