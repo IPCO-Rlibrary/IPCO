@@ -80,7 +80,7 @@ Arguments
 
 **dataset**		dataset where rows are functions/pathways and columns are samples
 
-**type**	Whether KEGG or MetaCyc dataset. type= “kegg” or type=“metacyc”
+**type**	Whether KEGG or MetaCyc dataset. type= "kegg" or type="metacyc"
 
 **threshold_dataset**	dataset containing the information about pathway/function coverage. Threshold dataset should contain the same functions/pathways as present in dataset
 
@@ -139,21 +139,21 @@ data(IPCO_HMP)
 
 **Step 2: Normalisation**
 
-Ref_MetaCyc_norm <- transform_data(IPCO_Healthy$MetaCyc,“proportion”)
+Ref_MetaCyc_norm <- transform_data(IPCO_Healthy$MetaCyc,"proportion")
 
-Ref_Species_norm <- transform_data(IPCO_Healthy$Species,“relab”)
+Ref_Species_norm <- transform_data(IPCO_Healthy$Species,"relab")
 
 or
 
-Ref_HMP_closed_OTU_norm <- transform_data(IPCO_HMP$closed_16S,“count”)
+Ref_HMP_closed_OTU_norm <- transform_data(IPCO_HMP$closed_16S,"count")
 
 **Step 3: Filtering**
 
-Ref_MetaCyc_filter <- filter_functionality(Ref_MetaCyc_norm, “metacyc”, IPCO_Healthy$MetaCyc_coverage)
+Ref_MetaCyc_filter <- filter_functionality(Ref_MetaCyc_norm, "metacyc", IPCO_Healthy$MetaCyc_coverage)
 
 or
 
-Ref_MetaCyc_filter <- filter_functionality(Ref_MetaCyc_norm, “metacyc”, IPCO_Healthy$MetaCyc_coverage, threshold=0.4)
+Ref_MetaCyc_filter <- filter_functionality(Ref_MetaCyc_norm, "metacyc", IPCO_Healthy$MetaCyc_coverage, threshold=0.4)
 
 **Note:** Filtering out pathways whose mean coverage is below 40th percentile.
 
