@@ -161,11 +161,11 @@ Ref_MetaCyc_filter <- filter_functionality(Ref_MetaCyc_norm, “metacyc”, IPCO
 
 IPCO_inferred <- IPCO(Ref_MetaCyc_filter, Ref_Species_norm, queried_dataset)
 
-### Table containing predicted functionality
+**Table containing predicted functionality**
 
 IPCO_inferred$predicted
 
-### Contribution of taxa to the functionality
+**Contribution of taxa to the functionality**
 
 IPCO_inferred$taxa_contribution
 
